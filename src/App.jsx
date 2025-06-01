@@ -1,36 +1,44 @@
+import { useState } from "react";
 import "./App.css";
-import AuthForm from "./components/Login/AuthForm";
 
 // let isLoggedIn = false;
 
 // const currentTime = new Date().getHours();
 
-let userIsRegistered = true;
+let isDone = false;
+
+const strikeThrough = {
+  textDecoration: "line-through",
+};
 
 function App() {
+  // let [count, setCount] = useState(0);
+
+  // function increase() {
+  //   setCount(count + 1);
+  // }
+
+  let [isDone, setIsDone] = useState(0);
+
+  function strike() {
+    setIsDone(true);
+  }
+  function unStrike() {
+    setIsDone(false);
+  }
   return (
     <>
-      <div className="container">
-        {<AuthForm userIsRegistered={userIsRegistered} />}
-      </div>
+      <p style={isDone ? strikeThrough : null}>Buy Milk</p>
+
+      <button onClick={strike}>Change to strike through</button>
+      <button onClick={unStrike}>Change back</button>
+
+      {/* <div className="container">
+        <h1>{count}</h1>
+        <button onClick={increase}>+</button>
+      </div> */}
     </>
   );
-  // return (
-  //   <>
-  //     <div className="container">
-  //       {isLoggedIn ? <h1>Hello</h1> : <LoginForm />}
-
-  //       {/* {currentTime > 12 ? <h1>Why are you still working?</h1> : null} */}
-  //       {currentTime > 12 && <h1>Why are you still working?</h1>}
-  //     </div>
-  //   </>
-  // );
 }
 
 export default App;
-
-//Challenge: Without moving the userIsRegistered variable,
-//1. Show Login as the button text if userIsRegistered is true.
-//Show Register as the button text if userIsRegistered is false.
-//2. Only show the Confirm Password input if userIsRegistered is false.
-//Don't show it if userIsRegistered is true.
