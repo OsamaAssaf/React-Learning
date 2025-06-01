@@ -1,4 +1,4 @@
-import { add, multiply, subtract, divide } from "../calculator";
+import { add, multiply, subtract, divide } from "../../calculator";
 
 function CalculatorList() {
   return (

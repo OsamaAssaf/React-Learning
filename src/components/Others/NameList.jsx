@@ -1,6 +1,6 @@
 import React from "react";
 
-import PI, {doublePi, triplePi} from '../math';
+import PI, { doublePi, triplePi } from "../../math";
 
 function NameList() {
   return (

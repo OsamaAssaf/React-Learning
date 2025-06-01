@@ -1,16 +1,14 @@
 import "./App.css";
-import Heading from "./components/Heading";
-import NameList from "./components/NameList";
-import Greeting from "./components/Greeting";
-import CalculatorList from "./components/CalculatorList";
+import EmojiList from "./components/Emojis/EmojiList";
+import EmojiHeading from "./components/Emojis/EmojiHeading";
 
 function App() {
   return (
     <>
-      <Heading />
-      <NameList />
-      <Greeting />
-      <CalculatorList />
+      <div>
+        <EmojiHeading />
+        <EmojiList />
+      </div>
     </>
   );
 }
