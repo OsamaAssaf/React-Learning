@@ -5,8 +5,6 @@ import "./App.css";
 
 // const currentTime = new Date().getHours();
 
-let isDone = false;
-
 const strikeThrough = {
   textDecoration: "line-through",
 };
